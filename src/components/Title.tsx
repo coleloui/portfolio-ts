@@ -1,48 +1,85 @@
 import styled from 'styled-components';
-// import Louis from './pics/Louis.jpg';
+import Louis from './pics/Louis.jpg';
 import Me from './pics/me.jpg';
 
 const Wrapper = styled.div`
-	top: 0;
-	background-image: linear-gradient(
-			rgba(255, 255, 255, 0.25),
-			rgba(255, 255, 255, 0.25)
-		),
-		url(${Me});
+	background: #000;
 	width: 100%;
-	min-height: 100vh;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-blend-mode: lighten;
-	div {
-		padding-top: 35rem;
-	}
-	h1 {
-		color: var(--primary);
-		font-weight: 400;
-		font-size: 350%;
-		text-transform: capitalize;
-		padding: 2.5rem 5rem 0;
-	}
-	h3 {
-		color: var(--primary);
-		font-weight: 400;
-		font-size: 275%;
-		padding-left: 3.5rem;
-	}
+	height: 100vh;
+	display: flex;
+	flex-flow: row wrap;
+`;
+
+const Container = styled.div`
+	background: #000;
+	padding-top: 10rem;
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 45%;
+`;
+
+const Title = styled.h1`
+	color: var(--white);
+	font-weight: 400;
+	font-size: 350%;
+	padding: 2.5rem 3.5rem 0;
+`;
+
+const Portrait = styled.img`
+	margin: 0 0 0 3rem;
+	width: 400px;
+	height: auto;
+	border-radius: 20%;
+	align-self: center;
+`;
+
+const SmallerTitle = styled.h3`
+	color: var(--white);
+	font-weight: 400;
+	font-size: 275%;
+	padding-left: 3.5rem;
+`;
+
+const BioContainer = styled(Container)`
+	padding-top: 10rem;
+	flex: 0 0 50%;
+`;
+
+const Biog = styled(Title)`
+	font-size: 150%;
+	text-align: center;
+	padding-right: -5rem;
+`;
+
+const LargerPortrait = styled(Portrait)`
+	padding-top: 3rem;
+	height: 500px;
+	width: auto;
+	border-radius: 20%;
 `;
 
 export const TheTitle: React.FC = () => {
 	return (
 		<Wrapper>
-			<div>
-				<h1>Hey,</h1>
-				<h3>
-					I'm Louis a Software Developer <br></br> and avid gamer!
-				</h3>
-			</div>
+			<Container>
+				<Portrait src={Me} alt="Louis Coleman" />
+				<Title>Welcome!</Title>
+				<SmallerTitle>
+					I'm Louis, a Software Developer and avid gamer
+				</SmallerTitle>
+			</Container>
+			<BioContainer>
+				<Biog>
+					I am a passionate Software Engineer living in Seattle,
+					Washington. I have always had a huge fascination in
+					computers with an emphasis on gaming. Over time this evolved
+					from something I lightly dabbled then turned into a love
+					during the University of Washington Full Stack Coding
+					Bootcamp which i graduated from in May of 2020 and have been
+					pursuing since!
+				</Biog>
+				<LargerPortrait src={Louis} alt="Louis Bandit and Niko" />
+			</BioContainer>
 		</Wrapper>
 	);
 };

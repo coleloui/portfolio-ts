@@ -11,13 +11,13 @@ const GlobalStyles = createGlobalStyle`
 };
 
 ::-webkit-scrollbar-track{
-  background: rgba(0,0,0,0.1);
+  background: linear-gradient(#fff, #000);
 };
 
 ::-webkit-scrollbar-thumb{
   /* border: 2.5px solid transparent; */
   border-radius: 100px;
-  background-color: #645cff;
+  background-color: #404040;
   background-clip: content-box;
   /* background-image: linear-gradient(180deg,#645cff 0%, #645cff 99%);
   box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5); */

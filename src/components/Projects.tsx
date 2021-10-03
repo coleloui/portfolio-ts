@@ -12,7 +12,6 @@ const Wrapper = styled.div`
 	background: black;
 	padding: 1rem;
 	color: var(--white);
-
 	p {
 		display: none;
 	}
