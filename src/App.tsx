@@ -1,6 +1,6 @@
 import GlobalStyles from './global-styles';
 import { TheTitle } from './components/Title';
-// import { Footer } from './components/Footer';
+import { Footer } from './components/Footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Header } from './components/Header';
 import { ProjPage } from './components/ProjPage';
@@ -20,7 +20,7 @@ export const App: React.FC = () => {
 						<ProjPage />
 					</Route>
 				</Switch>
-				{/* <Footer /> */}
+				<Footer />
 			</Router>
 		</div>
 	);
