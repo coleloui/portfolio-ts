@@ -2,7 +2,7 @@ import GlobalStyles from './global-styles';
 import { ProjectInfo } from './components/projects/ProjectInfo';
 import { TheTitle } from './components/Title';
 import { Projects } from './components/Projects';
-import { Footer } from './components/Footer';
+// import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
 	return (
@@ -19,7 +19,7 @@ export const App: React.FC = () => {
 					github={project.github}
 				/>
 			))}
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 };

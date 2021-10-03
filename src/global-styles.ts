@@ -4,7 +4,24 @@ const GlobalStyles = createGlobalStyle`
 :root{
 	--primary: #645cff;
 	--white: #fff;
-}
+};
+
+::-webkit-scrollbar{
+  width: 20px;
+};
+
+::-webkit-scrollbar-track{
+  background: rgba(0,0,0,0.1);
+};
+
+::-webkit-scrollbar-thumb{
+  /* border: 2.5px solid transparent; */
+  border-radius: 100px;
+  background-color: #645cff;
+  background-clip: content-box;
+  /* background-image: linear-gradient(180deg,#645cff 0%, #645cff 99%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5); */
+};
 
 * {
     margin: 0;

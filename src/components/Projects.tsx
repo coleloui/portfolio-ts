@@ -11,47 +11,18 @@ export type ProjectProps = {
 const Wrapper = styled.div`
 	background: black;
 	padding: 1rem;
+	color: var(--white);
 
-	h1 {
-		color: var(--white);
-	}
 	p {
 		display: none;
-		color: var(--white);
 	}
 	a {
 		display: none;
 		color: var(--white);
 	}
-	span {
-		text-decoration: none;
-		background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
-			linear-gradient(#dfe5f3, #dfe5f3);
-		background-size: 100% 2px, 0 2px;
-		background-position: 100% 100%, 0 100%;
-		background-repeat: no-repeat;
-		transition: background-size 0.5s linear;
-	}
 	img {
 		width: 600px;
 		border-radius: 0.25rem;
-	}
-	aside {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-	}
-	#mainDiv {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		padding: 3rem;
-		border-radius: 0.33rem;
-		transition: all 0.5s ease-in-out;
-	}
-	#mainDisplay {
-		display: flex;
-		align-self: center;
 	}
 	#title {
 		opacity: 0;
@@ -59,7 +30,37 @@ const Wrapper = styled.div`
 	#secondaryDiv {
 		display: flex;
 	}
-	#mainDiv:hover {
+`;
+
+const HoverInfo = styled.div`
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+`;
+
+const MainTitle = styled.h1`
+	display: flex;
+	align-self: center;
+`;
+
+const Underline = styled.span`
+	text-decoration: none;
+	background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
+		linear-gradient(#dfe5f3, #dfe5f3);
+	background-size: 100% 2px, 0 2px;
+	background-position: 100% 100%, 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size 0.5s linear;
+`;
+
+const MainDiv = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 3rem;
+	border-radius: 0.33rem;
+	transition: all 0.5s ease-in-out;
+	&:hover {
 		box-shadow: 0 0 17px var(--white);
 		background: #404040;
 		#mainDisplay {
@@ -93,13 +94,13 @@ export const Projects: React.FC<ProjectProps> = ({
 }) => {
 	return (
 		<Wrapper>
-			<div id="mainDiv">
-				<h1 id="mainDisplay">
-					<span>{name}</span>
-				</h1>
-				<aside>
+			<MainDiv>
+				<MainTitle id="mainDisplay">
+					<Underline>{name}</Underline>
+				</MainTitle>
+				<HoverInfo>
 					<h1 id="title">
-						<span>{name}</span>
+						<Underline>{name}</Underline>
 					</h1>
 					<p>{bio}</p>
 					<div id="secondaryDiv">
@@ -110,9 +111,9 @@ export const Projects: React.FC<ProjectProps> = ({
 						)}
 						{github ? <a href={github}>Github</a> : ''}
 					</div>
-				</aside>
+				</HoverInfo>
 				<img src={photo} alt={name} />
-			</div>
+			</MainDiv>
 		</Wrapper>
 	);
 };
