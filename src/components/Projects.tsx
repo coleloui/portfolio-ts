@@ -80,7 +80,7 @@ const Projects = ({ name, photo, bio }: ProjectProps): ReactElement => {
 					</h1>
 					<p>{bio}</p>
 				</aside>
-				<img src={photo} />
+				<img src={photo} alt={name} />
 			</div>
 		</Wrapper>
 	);
