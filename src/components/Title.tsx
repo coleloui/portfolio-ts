@@ -1,7 +1,6 @@
-import React, { ReactElement } from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import Louis from './pics/me.jpg';
+// import Louis from './pics/Louis.jpg';
+import Me from './pics/me.jpg';
 
 const Wrapper = styled.div`
 	top: 0;
@@ -9,7 +8,7 @@ const Wrapper = styled.div`
 			rgba(255, 255, 255, 0.25),
 			rgba(255, 255, 255, 0.25)
 		),
-		url(${Louis});
+		url(${Me});
 	width: 100%;
 	min-height: 100vh;
 	background-attachment: fixed;
@@ -35,7 +34,7 @@ const Wrapper = styled.div`
 	}
 `;
 
-function TheTitle(): ReactElement {
+export const TheTitle: React.FC = () => {
 	return (
 		<Wrapper>
 			<div>
@@ -46,10 +45,4 @@ function TheTitle(): ReactElement {
 			</div>
 		</Wrapper>
 	);
-}
-
-TheTitle.propTypes = {
-	title: PropTypes.string
 };
-
-export default TheTitle;

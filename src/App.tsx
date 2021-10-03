@@ -1,23 +1,25 @@
-import { ReactElement } from 'react';
-import Projects from './components/Projects';
-import TheTitle from './components/Title';
 import GlobalStyles from './global-styles';
-import ProjectNames from './components/projects/ProjectInfo';
+import { ProjectInfo } from './components/projects/ProjectInfo';
+import { TheTitle } from './components/Title';
+import { Projects } from './components/Projects';
+import { Footer } from './components/Footer';
 
-function App(): ReactElement {
+export const App: React.FC = () => {
 	return (
 		<div className="App">
 			<GlobalStyles />
 			<TheTitle />
-			{ProjectNames.map(project => (
+			{ProjectInfo.map(project => (
 				<Projects
+					key={project.projName}
 					name={project.projName}
 					photo={project.photo}
 					bio={project.biograph}
+					deployedLink={project.deployedLink}
+					github={project.github}
 				/>
 			))}
+			<Footer />
 		</div>
 	);
-}
-
-export default App;
+};
