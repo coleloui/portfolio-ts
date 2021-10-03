@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
 };
 
 ::-webkit-scrollbar-track{
-  background: linear-gradient(#fff 0%, #000 33%, #000 66%, #fff 100%);
+  background: linear-gradient(#fff 0%, #000 8.25%, #000 95.05%, #fff 100%);
 };
 
 ::-webkit-scrollbar-thumb{

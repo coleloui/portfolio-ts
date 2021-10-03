@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
 		<Nav>
 			<NavLink to="/">Home</NavLink>
 			<NavLink to="/projects">Projects</NavLink>
-			{/* <NavLink to="/contact">Stack/Contact</NavLink> */}
+			<NavLink to="/stack">Stack/Contact</NavLink>
 		</Nav>
 	);
 };

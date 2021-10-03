@@ -19,9 +19,6 @@ const Foot = styled.div`
 const FootLink = styled(Link)`
 	color: #000000;
 	text-decoration: none;
-	&:hover {
-		transform: scale(1.5);
-	}
 `;
 
 export const Footer: React.FC = () => {
