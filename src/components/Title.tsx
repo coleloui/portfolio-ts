@@ -64,19 +64,19 @@ export const TheTitle: React.FC = () => {
 			<Container>
 				<Portrait src={Me} alt="Louis Coleman" />
 				<Title>Welcome!</Title>
-				<SmallerTitle>
-					I'm Louis, a Software Developer and avid gamer
-				</SmallerTitle>
+				<SmallerTitle>I'm Louis, a Software Developer</SmallerTitle>
 			</Container>
 			<BioContainer>
 				<Biog>
 					I am a passionate Software Engineer living in Seattle,
-					Washington. I have always had a huge fascination in
-					computers with an emphasis on gaming. Over time this evolved
-					from something I lightly dabbled then turned into a love
-					during the University of Washington Full Stack Coding
-					Bootcamp which i graduated from in May of 2020 and have been
-					pursuing since!
+					Washington. I have always had a huge fascination with
+					computers. This fascination became a love during my time as
+					a student in University of Washington Full Stack Coding
+					Bootcamp, which i graduated from in May of 2020. Since
+					graduating I have worked hard as a TA of the same class from
+					which I graduated, improving my skills and knowledge while
+					additionally broading my horizons through both my own
+					learning and the developing curriculum.
 				</Biog>
 				<LargerPortrait src={Louis} alt="Louis Bandit and Niko" />
 			</BioContainer>

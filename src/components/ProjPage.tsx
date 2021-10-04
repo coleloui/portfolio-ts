@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
 	margin-top: 5rem;
+	margin-bottom: 3rem;
 `;
 
 export const ProjPage: React.FC = () => {
