@@ -9,7 +9,7 @@ export type ProjectProps = {
 };
 
 const Wrapper = styled.div`
-	background: black;
+	background: #404040;
 	padding: 1rem;
 	color: var(--white);
 	p {
@@ -40,6 +40,7 @@ const HoverInfo = styled.div`
 const MainTitle = styled.h1`
 	display: flex;
 	align-self: center;
+	color: var(--primary);
 `;
 
 const Underline = styled.span`
@@ -61,11 +62,12 @@ const MainDiv = styled.div`
 	transition: all 0.5s ease-in-out;
 	&:hover {
 		box-shadow: 0 0 17px var(--white);
-		background: #404040;
+		background: black;
 		#mainDisplay {
 			display: none;
 		}
 		#title {
+			color: var(--primary);
 			opacity: 1;
 			transition: all 0.2s ease-in-out;
 		}
@@ -94,9 +96,7 @@ export const Projects: React.FC<ProjectProps> = ({
 	return (
 		<Wrapper>
 			<MainDiv>
-				<MainTitle id="mainDisplay">
-					<Underline>{name}</Underline>
-				</MainTitle>
+				<MainTitle id="mainDisplay">{name}</MainTitle>
 				<HoverInfo>
 					<h1 id="title">
 						<Underline>{name}</Underline>

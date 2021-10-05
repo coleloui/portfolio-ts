@@ -4,14 +4,14 @@ import GithubIcon from './social-icons/github.png';
 import LinkedIcon from './social-icons/linkedin.png';
 
 const Wrapper = styled.div`
-	background: black;
+	background: var(--secondary);
 	height: 90vh;
 	width: 100%;
 	padding-top: 5rem;
 	display: flex;
 	flex-flow: row wrap;
 	h3 {
-		color: var(--white);
+		color: var(--primary);
 		font-weight: 800;
 		text-decoration: underline;
 		margin-left: 10rem;
@@ -35,7 +35,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
-	color: var(--white);
+	color: var(--primary);
 	text-align: center;
 	margin-bottom: 3rem;
 	text-transform: capitalize;
@@ -59,6 +59,9 @@ const TechStack = styled.div`
 const SocIcon = styled.img`
 	width: 75px;
 	height: auto;
+	&:hover {
+		transform: scale(1.5);
+	}
 `;
 
 export const Stack: React.FC = () => {

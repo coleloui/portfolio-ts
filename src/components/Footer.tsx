@@ -8,11 +8,12 @@ const Foot = styled.div`
 	bottom: 0;
 	position: fixed;
 	width: 100%;
-	height: 3rem;
-	background: linear-gradient(#000, #fff);
+	height: 2rem;
+	background: #fff;
 
 	div {
-		margin-top: 1rem;
+		align-self: center;
+		/* margin-top: 1rem; */
 	}
 `;
 

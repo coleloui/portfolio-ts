@@ -4,6 +4,7 @@ const GlobalStyles = createGlobalStyle`
 :root{
 	--primary: #645cff;
 	--white: #fff;
+  --secondary: #404040
 };
 
 ::-webkit-scrollbar{
@@ -11,13 +12,13 @@ const GlobalStyles = createGlobalStyle`
 };
 
 ::-webkit-scrollbar-track{
-  background: linear-gradient(#fff 0%, #000 8.25%, #000 95.05%, #fff 100%);
+  background: var(---white);
 };
 
 ::-webkit-scrollbar-thumb{
   /* border: 2.5px solid transparent; */
   border-radius: 100px;
-  background-color: #404040;
+  background-color: var(--primary);
   background-clip: content-box;
   /* background-image: linear-gradient(180deg,#645cff 0%, #645cff 99%);
   box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5); */

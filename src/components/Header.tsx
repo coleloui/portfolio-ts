@@ -8,15 +8,16 @@ const Nav = styled.div`
 	top: 0;
 	position: fixed;
 	width: 100%;
-	height: 5rem;
-	background: linear-gradient(#fff, #000);
+	height: 3rem;
+	background: #fff;
 `;
 
 const NavLink = styled(Link)`
 	display: flex;
 	color: #000000;
 	text-decoration: none;
-	margin: 1rem 1.5rem;
+	align-self: center;
+	margin: 0rem 1.5rem;
 	&:hover {
 		transform: scale(1.5);
 	}

@@ -3,8 +3,8 @@ import { Projects } from './Projects';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-	margin-top: 5rem;
-	margin-bottom: 3rem;
+	margin-top: 3rem;
+	margin-bottom: 2rem;
 `;
 
 export const ProjPage: React.FC = () => {
