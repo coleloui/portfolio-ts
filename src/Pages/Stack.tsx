@@ -1,6 +1,17 @@
 import styled from 'styled-components';
+import { Social } from '../components/social/Social';
+import { Tech } from '../components/TechStack/Tech';
 
-export const Wrapper = styled.div`
+export const Stack: React.FC = () => {
+	return (
+		<Wrapper>
+			<Tech />
+			<Social />
+		</Wrapper>
+	);
+};
+
+const Wrapper = styled.div`
 	background: var(--secondary);
 	height: 90vh;
 	width: 100%;
@@ -15,19 +26,7 @@ export const Wrapper = styled.div`
 			margin: -0.25rem 0rem 0.5rem;
 		}
 	}
-	@media (max-width: 768px) {
+	@media (max-width: 992px) {
 		height: 100%;
-	}
-`;
-
-export const TitleWrapper = styled(Wrapper)`
-	background: #404040;
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	height: 90vh;
-	@media (max-width: 768px) {
-		height: 100%;
-		padding-bottom: 3rem;
 	}
 `;

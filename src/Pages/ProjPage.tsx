@@ -1,5 +1,5 @@
-import { ProjectInfo } from './projects/ProjectInfo';
-import { Projects } from './Projects';
+import { ProjectInfo } from '../components/projects/ProjectInfo';
+import { Projects } from '../components/projects/Projects';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`

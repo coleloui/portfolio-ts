@@ -1,10 +1,10 @@
 import GlobalStyles from './global-styles';
-import { TheTitle } from './components/Title';
+import { TheTitle } from './Pages/Title';
 import { Footer } from './components/Footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Header } from './components/Header';
-import { ProjPage } from './components/ProjPage';
-import { Stack } from './components/Stack';
+import { ProjPage } from './Pages/ProjPage';
+import { Stack } from './Pages/Stack';
 
 export const App: React.FC = () => {
 	return (
