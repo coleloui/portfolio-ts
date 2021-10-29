@@ -6,9 +6,11 @@ module.exports = {
 	],
 	plugins: ['prettier'],
 	rules: {
-		"prettier/prettier": ["error",
-			{"endOfLine": "auto"}, {usePrettierrc: true}
-		  ],
+		'prettier/prettier': [
+			'error',
+			{ endOfLine: 'auto' },
+			{ usePrettierrc: true }
+		],
 		'no-unused-vars': 'error',
 		'import/no-anonymous-default-export': 'error',
 		'no-mixed-spaces-and-tabs': 'off',
