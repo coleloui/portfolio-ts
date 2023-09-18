@@ -20,7 +20,7 @@ export const ProjPage: React.FC = () => {
 };
 
 const Wrapper = styled.div`
-	width: auto;
+	width: 1000px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	display: block;
