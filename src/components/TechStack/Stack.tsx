@@ -1,23 +1,30 @@
 import styled from 'styled-components';
-import { Social } from '../components/social/Social';
-import { Tech } from '../components/TechStack/Tech';
+import { Social } from '../social/Social';
+import { Tech } from './Tech';
 
 export const Stack: React.FC = () => {
 	return (
 		<Wrapper>
-			<Tech />
-			<Social />
+			<Container>
+				<Tech />
+				<Social />
+			</Container>
 		</Wrapper>
 	);
 };
 
 const Wrapper = styled.div`
+	display: block;
+	margin-left: auto;
+	width: auto;
+`;
+
+const Container = styled.div`
 	background: var(--secondary);
-	height: 90vh;
-	width: 100%;
-	padding-top: 5rem;
+	padding-top: 50px;
 	display: flex;
 	flex-flow: row wrap;
+	margin-right: 40px;
 	p {
 		color: var(--white);
 		margin-left: 10rem;
@@ -27,6 +34,7 @@ const Wrapper = styled.div`
 		}
 	}
 	@media (max-width: 992px) {
+		width: 100%;
 		height: 100%;
 	}
 `;

@@ -1,11 +1,6 @@
-import { ProjectInfo } from '../components/projects/ProjectInfo';
-import { Projects } from '../components/projects/Projects';
+import { ProjectInfo } from './ProjectInfo';
+import { Projects } from './Projects';
 import styled from 'styled-components';
-
-const Wrapper = styled.div`
-	margin-top: 3rem;
-	margin-bottom: 2rem;
-`;
 
 export const ProjPage: React.FC = () => {
 	return (
@@ -23,3 +18,14 @@ export const ProjPage: React.FC = () => {
 		</Wrapper>
 	);
 };
+
+const Wrapper = styled.div`
+	width: 1000px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+	margin-left: auto;
+	@media (max-width: 1249px) {
+		width: 100%;
+	}
+`;
