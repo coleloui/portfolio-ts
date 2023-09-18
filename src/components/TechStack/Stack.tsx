@@ -16,7 +16,7 @@ export const Stack: React.FC = () => {
 const Wrapper = styled.div`
 	display: block;
 	margin-left: auto;
-	width: auto;
+	width: 1600px;
 `;
 
 const Container = styled.div`
