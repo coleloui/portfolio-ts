@@ -9,7 +9,7 @@ export const ProjPage: React.FC = () => {
 				<Projects
 					key={project.projName}
 					name={project.projName}
-					photo={project.photo}
+					minor={project.minor}
 					bio={project.biograph}
 					deployedLink={project.deployedLink}
 					github={project.github}
@@ -20,12 +20,8 @@ export const ProjPage: React.FC = () => {
 };
 
 const Wrapper = styled.div`
-	width: 1600px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	display: block;
 	margin-left: auto;
-	@media (max-width: 1249px) {
-		width: 100%;
-	}
 `;

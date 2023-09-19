@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { ProjPage } from '../components/projects/ProjPage';
 import { Aside } from '../components/aside';
-import { Stack } from '../components/TechStack/Stack';
+import { Stack } from '../components/techStack/Stack';
 
 export type BodyProps = {
 	mainInfo: string;
@@ -19,5 +19,8 @@ export const TheBody: React.FC<BodyProps> = ({ mainInfo }) => {
 
 const Wrapper = styled.div`
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row;
+	@media (max-width: 1249px) {
+		flex-wrap: wrap;
+	}
 `;

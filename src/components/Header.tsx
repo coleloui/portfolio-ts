@@ -24,7 +24,6 @@ const Nav = styled.div`
 	justify-content: center;
 	align-content: center;
 	top: 0;
-	position: sticky;
 	width: 100%;
 	height: 30px;
 	background: #fff;

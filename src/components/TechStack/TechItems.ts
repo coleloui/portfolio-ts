@@ -1,31 +1,27 @@
 export const TechItems = [
 	{
-		name: 'App Framework',
+		name: 'Professional Skills',
 		tech: [
 			{
-				item: 'HTML, CSS, JavaScript, jQuery - these are for a basic app with minimal functionality.'
+				item: 'HTML, CSS, JavaScript, jQuery'
 			},
 			{
-				item: 'React.js - a go to for single page and static apps.',
-				linkA: `https://reactjs.org/`
+				item: 'React.js, Handlebars.js'
 			},
 			{
-				item: 'Express.js with Nodejs server for REST API'
+				item: 'BootStrap, Material-UI, Styled-Components'
 			},
 			{
-				item: 'GraphQL using Apollo server with Express',
-				linkA: `https://graphql.org/`,
-				B: `https://www.apollographql.com/blog/backend/using-express-with-graphql-server-node-js/`
-			},
-
-			{
-				item: 'Handlebars.js for non-React templating',
-				linkA: `https://handlebarsjs.com/`
+				item: 'Express.js, Node.js, GraphQL using Apollo server'
 			},
 			{
-				item: 'Material-UI or Styled-Components for my CSS Framework',
-				linkA: `https://mui.com/`,
-				B: `https://styled-components.com/`
+				item: 'Github, Kanba, Zoho'
+			},
+			{
+				item: 'Redux, MongoDB, MySql'
+			},
+			{
+				item: 'Agile Development, Collaboration, Teamwork'
 			}
 		]
 	},
@@ -33,38 +29,35 @@ export const TechItems = [
 		name: 'Editor and Terminal',
 		tech: [
 			{
-				item: 'VS Code - my go to text editor, very easy to use with well built extensions.',
-				linkA: `https://code.visualstudio.com/`
+				item: 'VS Code'
 			},
 			{
-				item: 'Windows Terminal - setting this up was such a nice quality of life improvement, working out of multiple tabs changed the terminal game.',
-				linkA: `https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab`
+				item: 'Windows Terminal, GitBash'
 			}
 		]
 	},
 	{
-		name: 'Domain names and Hosting',
+		name: 'Domain names, Hosting, and CDN',
 		tech: [
 			{
-				item: 'Namecheap - for domain name registration',
-				linkA: `https://www.namecheap.com/`
+				item: 'Namecheap'
 			},
 			{
-				item: 'Netlify - easy deploment of application when more than just HTML and using Serverless Functions.',
-				linkA: `https://www.netlify.com/`
+				item: 'Netlify'
 			},
 			{
-				item: 'Heroku - easy deploment of application when more than just HTML.',
-				linkA: `https://www.heroku.com/`
+				item: 'Heroku'
+			},
+			{
+				item: 'Cloudflare'
 			}
 		]
 	},
 	{
-		name: 'CDN',
+		name: 'Education',
 		tech: [
 			{
-				item: 'Cloudflare - free tier that is really easy to use.',
-				linkA: `https://www.cloudflare.com/`
+				item: 'Full Stack Web Development Bootcamp - University of Washington, Seattle, Wa - Completion May 2020'
 			}
 		]
 	}

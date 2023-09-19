@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 
 export type ProjectProps = {
 	name: string;
-	photo: string;
+	minor: string;
 	bio: string;
 	deployedLink?: string;
 	github?: string;
@@ -10,31 +10,29 @@ export type ProjectProps = {
 
 export const Projects: React.FC<ProjectProps> = ({
 	name,
-	photo,
+	minor,
 	bio,
 	deployedLink,
 	github
 }) => {
 	return (
-		<Wrapper>
-			<MainDiv>
-				<MainTitle>{name}</MainTitle>
-				<p>{bio}</p>
-				<div>
-					{deployedLink && (
-						<SpaceLink href={deployedLink}>
-							Deployed Application
-						</SpaceLink>
-					)}
-					{github && <SpaceLink href={github}>Github</SpaceLink>}
-				</div>
-			</MainDiv>
-			<ProjectImage src={photo} alt={name} />
-		</Wrapper>
+		<MainDiv>
+			<MainTitle>{name}</MainTitle>
+			<MinorTitle>{minor}</MinorTitle>
+			<p>{bio}</p>
+			<div>
+				{deployedLink && (
+					<SpaceLink href={deployedLink}>
+						Deployed Application
+					</SpaceLink>
+				)}
+				{github && <SpaceLink href={github}>Github</SpaceLink>}
+			</div>
+		</MainDiv>
 	);
 };
 
-const Wrapper = styled.div`
+const MainDiv = styled.div`
 	background: #404040;
 	padding: 20px;
 	color: var(--white);
@@ -43,14 +41,11 @@ const Wrapper = styled.div`
 	a {
 		color: var(--white);
 	}
-`;
-
-const MainDiv = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	padding: 10px 5px;
+	margin: auto 0;
 	@media (max-width: 1249px) {
+		width: 100%;
 		p {
 			display: flex;
 			padding-top: 1rem;
@@ -64,20 +59,13 @@ const MainDiv = styled.div`
 `;
 
 const MainTitle = styled.h1`
-	display: flex;
-	align-self: center;
 	color: var(--primary);
+	margin-bottom: -5px;
 `;
 
-const ProjectImage = styled.img`
-	width: 250px;
-	height: 150px;
-	border-radius: 0.25rem;
-	margin: auto 0 auto 0;
-	padding-right: 10px;
-	@media (max-width: 800px) {
-		display: none;
-	}
+const MinorTitle = styled.h3`
+	color: var(--primary);
+	font-weight: 200;
 `;
 
 const SpaceLink = styled.a`

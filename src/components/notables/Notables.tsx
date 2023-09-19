@@ -1,20 +1,16 @@
 import styled from 'styled-components';
-import { TechItems } from './TechItems';
+import { NotableList } from './NotableList';
 import { List } from '../list/List';
 
-export const TechSections: React.FC = () => {
+export const Notables: React.FC = () => {
 	return (
 		<MainDiv>
-			{TechItems.map(Tech => (
-				<div key={Tech.name}>
-					<MinorTitle key={Tech.name}>{Tech.name}</MinorTitle>
-					<ListSet>
-						{Tech.tech.map(part => (
-							<List key={part.item} item={part.item} />
-						))}
-					</ListSet>
-				</div>
-			))}
+			<MinorTitle>Notable Broadcasts</MinorTitle>
+			<ListSet>
+				{NotableList.map((broadcast, i) => (
+					<List key={i} item={broadcast.item} />
+				))}
+			</ListSet>
 		</MainDiv>
 	);
 };
@@ -24,8 +20,7 @@ const MainDiv = styled.div`
 	color: var(--white);
 	display: flex;
 	flex-direction: column;
-	margin: auto 0;
-	width: auto;
+	width: 600px;
 	padding: 20px;
 	@media (max-width: 768px) {
 		margin-left: 10px;
@@ -35,8 +30,9 @@ const MainDiv = styled.div`
 const MinorTitle = styled.h1`
 	color: var(--primary);
 	font-weight: 200;
+	padding: 0px;
 `;
 
-export const ListSet = styled.ul`
+const ListSet = styled.ul`
 	margin-bottom: 3rem;
 `;

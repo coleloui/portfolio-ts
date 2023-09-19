@@ -32,33 +32,18 @@ export const Social: React.FC = () => {
 };
 
 const SocWrapper = styled.div`
-	justify-content: center;
 	display: flex;
-	flex-direction: column;
-	margin-left: 100px;
-	@media (max-width: 992px) {
-		flex: 0 0 100%;
-		flex-direction: row;
-		flex-wrap: wrap;
-		h1 {
-			flex: 0 0 100%;
-		}
-	}
+	flex-direction: row;
+	justify-content: space-around;
 `;
 
 const Links = styled.a`
 	display: block;
 	align-self: center;
-	margin: 1rem 0 4rem 0;
+	margin: 15px 0;
 `;
 
 const SocIcon = styled.img`
 	width: 50px;
 	height: auto;
-	@media (min-width: 992px) {
-		margin: 0rem;
-		&:hover {
-			transform: scale(1.5);
-		}
-	}
 `;
