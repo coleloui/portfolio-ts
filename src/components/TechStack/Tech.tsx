@@ -13,6 +13,8 @@ export const Tech: React.FC = () => {
 
 const TechStack = styled.div`
 	display: flex;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	@media (max-width: 992px) {
 		flex-flow: row wrap;
 		flex: 0 0 100%;

@@ -22,6 +22,6 @@ export const ProjPage: React.FC = () => {
 const Wrapper = styled.div`
 	margin-top: 10px;
 	margin-bottom: 10px;
-	display: block;
-	margin-left: auto;
+	display: flex;
+	flex-direction: column;
 `;
