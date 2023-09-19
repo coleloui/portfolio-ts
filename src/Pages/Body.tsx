@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { ProjPage } from '../components/projects/ProjPage';
 import { Aside } from '../components/aside';
-import { Stack } from '../components/techStack/Stack';
+import { Stack } from '../components/TechStack/Stack';
 
 export type BodyProps = {
 	mainInfo: string;
