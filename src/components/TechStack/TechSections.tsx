@@ -25,7 +25,6 @@ const MainDiv = styled.div`
 	display: flex;
 	flex-direction: column;
 	margin: auto 0;
-	width: auto;
 	padding: 20px;
 	@media (max-width: 768px) {
 		margin-left: 10px;

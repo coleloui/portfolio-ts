@@ -20,7 +20,6 @@ const MainDiv = styled.div`
 	color: var(--white);
 	display: flex;
 	flex-direction: column;
-	width: 600px;
 	padding: 20px;
 	@media (max-width: 768px) {
 		margin-left: 10px;

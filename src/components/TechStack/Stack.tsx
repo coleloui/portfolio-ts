@@ -10,9 +10,6 @@ export const Stack: React.FC = () => {
 };
 
 const Wrapper = styled.div`
-	display: block;
-	margin-left: auto;
-	width: 1500px;
 	background: var(--secondary);
 	margin-top: 10px;
 	@media (max-width: 992px) {
