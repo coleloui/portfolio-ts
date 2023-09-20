@@ -5,13 +5,10 @@ export const Footer: React.FC = () => {
 };
 
 const Foot = styled.div`
-	display: flex;
-	justify-content: center;
-	align-content: center;
+	position: absolute;
 	bottom: 0;
-	position: fixed;
 	width: 100%;
 	height: 2rem;
 	color: #fff;
-	align-self: center;
+	text-align: center;
 `;

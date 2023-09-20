@@ -10,7 +10,7 @@ export const Header: React.FC<HeaderProps> = ({ setMainInfo }) => {
 		<Nav>
 			<NavLink onClick={() => setMainInfo('projects')}>Projects</NavLink>
 			<NavLink onClick={() => setMainInfo('stack')}>
-				Stack/Contact
+				Skills/Notables
 			</NavLink>
 			<Download download href={Resume}>
 				Resume

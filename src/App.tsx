@@ -7,11 +7,11 @@ import { Header } from './components/Header';
 export const App: React.FC = () => {
 	const [mainInfo, setMainInfo] = useState<string>('projects');
 	return (
-		<>
+		<div style={{ position: 'relative', minHeight: '100vh' }}>
 			<GlobalStyles />
 			<Header setMainInfo={setMainInfo} />
 			<TheBody mainInfo={mainInfo} />
 			<Footer />
-		</>
+		</div>
 	);
 };

@@ -70,7 +70,7 @@ const Portrait = styled.img`
 	align-self: center;
 	padding: 0 0 1rem;
 	@media (max-width: 767px) {
-		display: none;
+		width: 125px;
 	}
 	@media (min-width: 1250px) {
 		padding-left: 10px;
