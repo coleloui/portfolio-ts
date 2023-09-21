@@ -41,6 +41,11 @@ const Links = styled.a`
 	display: block;
 	align-self: center;
 	margin: 15px 0;
+	@media (min-width: 992px) {
+		&:hover {
+			cursor: pointer;
+		}
+	}
 `;
 
 const SocIcon = styled.img`

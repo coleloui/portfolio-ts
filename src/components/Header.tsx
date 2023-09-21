@@ -39,6 +39,7 @@ const Download = styled.a`
 	@media (min-width: 992px) {
 		&:hover {
 			text-decoration: underline;
+			cursor: pointer;
 		}
 	}
 `;
@@ -53,6 +54,7 @@ const NavLink = styled.div`
 	@media (min-width: 992px) {
 		&:hover {
 			text-decoration: underline;
+			cursor: pointer;
 		}
 	}
 `;
