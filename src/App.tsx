@@ -9,7 +9,7 @@ export const App: React.FC = () => {
 	return (
 		<div style={{ position: 'relative', minHeight: '100vh' }}>
 			<GlobalStyles />
-			<Header setMainInfo={setMainInfo} />
+			<Header setMainInfo={setMainInfo} mainInfo={mainInfo} />
 			<TheBody mainInfo={mainInfo} />
 			<Footer />
 		</div>
