@@ -1,29 +1,37 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import EmailIcon from './social-icons/email.png';
 import GithubIcon from './social-icons/github.png';
 import LinkedIcon from './social-icons/linkedin.png';
 import Resume from '../resume/LouisColemanResume.pdf';
+import { ContactModal } from '../ContactModal';
 
 export function Social() {
+	const [modalOpen, setModalOpen] = useState(false);
+
 	return (
-		<Grid>
-			<Cell href="mailto:coleloui18@gmail.com" rel="noreferrer" target="_blank">
-				<CellIcon src={EmailIcon} alt="Email" />
-			</Cell>
-			<Cell href="https://github.com/coleloui" rel="noreferrer" target="_blank">
-				<CellIcon src={GithubIcon} alt="GitHub" />
-			</Cell>
-			<Cell
-				href="https://www.linkedin.com/in/louis-coleman/"
-				rel="noreferrer"
-				target="_blank"
-			>
-				<CellIcon src={LinkedIcon} alt="LinkedIn" />
-			</Cell>
-			<ResumeCell download href={Resume}>
-				Resume
-			</ResumeCell>
-		</Grid>
+		<>
+			<Grid>
+				<EmailCell onClick={() => setModalOpen(true)} role="button" tabIndex={0}
+					onKeyDown={e => e.key === 'Enter' && setModalOpen(true)}>
+					<CellIcon src={EmailIcon} alt="Email" />
+				</EmailCell>
+				<Cell href="https://github.com/coleloui" rel="noreferrer" target="_blank">
+					<CellIcon src={GithubIcon} alt="GitHub" />
+				</Cell>
+				<Cell
+					href="https://www.linkedin.com/in/louis-coleman/"
+					rel="noreferrer"
+					target="_blank"
+				>
+					<CellIcon src={LinkedIcon} alt="LinkedIn" />
+				</Cell>
+				<ResumeCell download href={Resume}>
+					Resume
+				</ResumeCell>
+			</Grid>
+			{modalOpen && <ContactModal onClose={() => setModalOpen(false)} />}
+		</>
 	);
 }
 
@@ -48,6 +56,23 @@ const Cell = styled.a`
 		border-color: var(--accent-cyan);
 		background: var(--bg-elevated);
 		cursor: pointer;
+	}
+`;
+
+const EmailCell = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 48px;
+	border-radius: 8px;
+	border: 1px solid var(--border);
+	background: var(--bg-card);
+	cursor: pointer;
+	transition: border-color 0.15s, background 0.15s;
+
+	&:hover {
+		border-color: var(--accent-cyan);
+		background: var(--bg-elevated);
 	}
 `;
 
