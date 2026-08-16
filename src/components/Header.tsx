@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import Resume from './resume/LouisColemanResume.pdf';
 
 export interface HeaderProps {
+	mainInfo: string;
 	setMainInfo: (val: string) => void;
 }
 
-export function Header({ setMainInfo }: HeaderProps) {
+export function Header({ mainInfo, setMainInfo }: HeaderProps) {
 	return (
 		<Nav>
 			<Brand>

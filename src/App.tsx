@@ -9,7 +9,7 @@ export function App() {
 	return (
 		<div style={{ position: 'relative', minHeight: '100vh' }}>
 			<GlobalStyles />
-			<Header setMainInfo={setMainInfo} mainInfo={mainInfo} />
+			<Header mainInfo={mainInfo} setMainInfo={setMainInfo} />
 			<TheBody mainInfo={mainInfo} />
 			<Footer />
 		</div>
