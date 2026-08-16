@@ -4,7 +4,7 @@ import { TheBody } from './Pages/Body';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 
-export const App: React.FC = () => {
+export function App() {
 	const [mainInfo, setMainInfo] = useState<string>('projects');
 	return (
 		<div style={{ position: 'relative', minHeight: '100vh' }}>
@@ -14,4 +14,4 @@ export const App: React.FC = () => {
 			<Footer />
 		</div>
 	);
-};
+}

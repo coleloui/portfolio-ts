@@ -1,24 +1,20 @@
 import styled, { keyframes } from 'styled-components';
 
-export type ProjectProps = {
+export interface ProjectProps {
 	name: string;
 	minor: string;
 	bio: string;
 	deployedLink?: string;
 	github?: string;
-	featured?: boolean;
-	tech?: string[];
-};
+}
 
-export const Projects: React.FC<ProjectProps> = ({
+export function Projects({
 	name,
 	minor,
 	bio,
 	deployedLink,
-	github,
-	featured,
-	tech
-}) => {
+	github
+}: ProjectProps) {
 	return (
 		<MainDiv $featured={featured}>
 			{featured && <FeaturedBadge>Featured</FeaturedBadge>}
@@ -56,7 +52,7 @@ export const Projects: React.FC<ProjectProps> = ({
 			)}
 		</MainDiv>
 	);
-};
+}
 
 const pulse = keyframes`
   0%, 100% { opacity: 1; }

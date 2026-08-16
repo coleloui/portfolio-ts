@@ -4,11 +4,11 @@ import { Aside } from '../components/aside';
 import { Stack } from '../components/TechStack/Stack';
 import { Notables } from '../components/notables/Notables';
 
-export type BodyProps = {
+interface IMainInfo {
 	mainInfo: string;
-};
+}
 
-export const TheBody: React.FC<BodyProps> = ({ mainInfo }) => {
+export function TheBody({ mainInfo }: IMainInfo) {
 	return (
 		<Outer>
 			<Wrapper>
@@ -19,7 +19,7 @@ export const TheBody: React.FC<BodyProps> = ({ mainInfo }) => {
 			</Wrapper>
 		</Outer>
 	);
-};
+}
 
 const Outer = styled.div`
 	display: flex;

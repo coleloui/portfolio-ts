@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 import Resume from './resume/LouisColemanResume.pdf';
 
-export type HeaderProps = {
+export interface HeaderProps {
 	setMainInfo: (val: string) => void;
-	mainInfo: string;
-};
+}
 
-export const Header: React.FC<HeaderProps> = ({ setMainInfo, mainInfo }) => {
+export function Header({ setMainInfo }: HeaderProps) {
 	return (
 		<Nav>
 			<Brand>
@@ -40,7 +39,7 @@ export const Header: React.FC<HeaderProps> = ({ setMainInfo, mainInfo }) => {
 			</NavRight>
 		</Nav>
 	);
-};
+}
 
 const Nav = styled.nav`
 	position: sticky;

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { TechSections } from './TechSections';
 
-export const Tech: React.FC = () => {
+export function Tech() {
 	return (
 		<TechStack>
 			<TechSections />
 		</TechStack>
 	);
-};
+}
 
 const TechStack = styled.div`
 	display: flex;

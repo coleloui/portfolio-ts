@@ -1,13 +1,8 @@
 import styled from 'styled-components';
 
-export const Footer: React.FC = () => {
-	return (
-		<Foot>
-			<span>© {new Date().getFullYear()} Louis Coleman</span>
-			<Built>Built with React &amp; TypeScript</Built>
-		</Foot>
-	);
-};
+export function Footer() {
+	return <Foot>© 2021 Louis Coleman</Foot>;
+}
 
 const Foot = styled.footer`
 	width: 100%;

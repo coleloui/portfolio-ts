@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NotableList } from './NotableList';
 import { List } from '../list/List';
 
-export const Notables: React.FC = () => {
+export function Notables() {
 	return (
 		<MainDiv>
 			<Header>
@@ -18,7 +18,7 @@ export const Notables: React.FC = () => {
 			</Grid>
 		</MainDiv>
 	);
-};
+}
 
 const MainDiv = styled.div`
 	flex: 1;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { TechItems } from './TechItems';
 import { List } from '../list/List';
 
-export const TechSections: React.FC = () => {
+export function TechSections() {
 	return (
 		<MainDiv>
 			{TechItems.map(Tech => (
@@ -17,7 +17,7 @@ export const TechSections: React.FC = () => {
 			))}
 		</MainDiv>
 	);
-};
+}
 
 const MainDiv = styled.div`
 	background: var(--bg-card);
