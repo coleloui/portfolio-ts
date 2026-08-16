@@ -92,7 +92,9 @@ const MainDiv = styled.div<{ $featured?: boolean }>`
 
 	&:hover {
 		border-color: ${({ $featured }) =>
-			$featured ? 'var(--accent-dim)' : 'var(--border-hover)'};
+			$featured ? 'var(--accent)' : 'var(--accent-cyan)'};
+		box-shadow: ${({ $featured }) =>
+			$featured ? '0 0 18px var(--accent-glow)' : 'none'};
 	}
 
 	@media (max-width: 1249px) {
@@ -151,6 +153,7 @@ const PulseDot = styled.span`
 	height: 6px;
 	border-radius: 50%;
 	background: var(--accent);
+	box-shadow: 0 0 6px var(--accent-glow);
 	animation: ${pulse} 2s ease-in-out infinite;
 	flex-shrink: 0;
 `;
@@ -172,9 +175,9 @@ const TagRow = styled.div`
 const Tag = styled.span`
 	font-family: var(--mono);
 	font-size: 0.65rem;
-	color: var(--accent);
-	background: var(--accent-soft);
-	border: 1px solid rgba(94, 234, 212, 0.3);
+	color: var(--accent-cyan);
+	background: var(--accent-cyan-soft);
+	border: 1px solid var(--accent-cyan);
 	border-radius: 100px;
 	padding: 2px 9px;
 `;
@@ -188,10 +191,11 @@ const LinksRow = styled.div`
 const CardLink = styled.a`
 	font-family: var(--mono);
 	font-size: 0.78rem;
-	color: var(--accent);
+	color: var(--text-secondary);
 	text-decoration: none;
 
 	&:hover {
+		color: var(--accent-cyan);
 		text-decoration: underline;
 	}
 `;

@@ -2,41 +2,45 @@ export const TechItems = [
 	{
 		name: 'Languages & Frameworks',
 		tech: [
-			{ item: 'TypeScript / JavaScript' },
-			{ item: 'React / Node.js' },
-			{ item: 'Python / FastAPI' },
-			{ item: 'Styled-Components' }
+			{ item: 'JavaScript, TypeScript' },
+			{ item: 'React, Node.js' },
+			{ item: 'Python, FastAPI' },
+			{ item: 'Tailwind CSS, shadcn/ui' }
 		]
 	},
 	{
-		name: 'Data & Infrastructure',
+		name: 'Data & Cloud',
 		tech: [
-			{ item: 'PostgreSQL / Redis' },
-			{ item: 'Docker' },
-			{ item: 'Railway' },
-			{ item: 'GitHub Actions CI/CD' }
+			{ item: 'PostgreSQL, MongoDB' },
+			{ item: 'Redis' },
+			{ item: 'AWS (S3, SES)' },
+			{ item: 'Docker' }
 		]
 	},
 	{
 		name: 'AI / Agent Tooling',
 		tech: [
 			{ item: 'MCP server development' },
-			{ item: 'Claude Code (daily use)' },
-			{ item: 'LLM-backed APIs — Groq, Anthropic' },
-			{ item: 'Agentic architecture design' }
+			{ item: 'Claude Code, Cursor' },
+			{ item: 'GitHub Copilot' },
+			{ item: 'LLM-backed APIs (Groq, Anthropic)' }
 		]
 	},
 	{
-		name: 'Editor and Terminal',
+		name: 'Practices & CI/CD',
 		tech: [
-			{ item: 'VS Code' },
-			{ item: 'Claude Code' }
+			{ item: 'CQRS, DTO/DBO modeling' },
+			{ item: 'TDD' },
+			{ item: 'GitHub Actions, GitLab CI/CD' },
+			{ item: 'Accessibility (WCAG)' }
 		]
 	},
 	{
 		name: 'Education',
 		tech: [
-			{ item: 'Full Stack Web Development Bootcamp — University of Washington' }
+			{
+				item: 'Full Stack Web Development Bootcamp — University of Washington'
+			}
 		]
 	}
 ];

@@ -1,16 +1,20 @@
-import { useState } from 'react';
 import GlobalStyles from './global-styles';
+import { Hero } from './components/Hero';
 import { TheBody } from './Pages/Body';
 import { Footer } from './components/Footer';
-import { Header } from './components/Header';
 
 export function App() {
-	const [mainInfo, setMainInfo] = useState<string>('projects');
 	return (
-		<div style={{ position: 'relative', minHeight: '100vh' }}>
+		<div
+			style={{
+				display: 'flex',
+				flexDirection: 'column',
+				minHeight: '100vh'
+			}}
+		>
 			<GlobalStyles />
-			<Header mainInfo={mainInfo} setMainInfo={setMainInfo} />
-			<TheBody mainInfo={mainInfo} />
+			<Hero />
+			<TheBody />
 			<Footer />
 		</div>
 	);
