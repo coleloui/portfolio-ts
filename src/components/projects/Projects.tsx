@@ -6,6 +6,8 @@ export interface ProjectProps {
 	bio: string;
 	deployedLink?: string;
 	github?: string;
+	featured?: boolean;
+	tech?: string[];
 }
 
 export function Projects({
@@ -13,7 +15,9 @@ export function Projects({
 	minor,
 	bio,
 	deployedLink,
-	github
+	github,
+	featured,
+	tech
 }: ProjectProps) {
 	return (
 		<MainDiv $featured={featured}>
@@ -39,12 +43,20 @@ export function Projects({
 			{(deployedLink || github) && (
 				<LinksRow>
 					{deployedLink && (
-						<CardLink href={deployedLink} target="_blank" rel="noopener noreferrer">
+						<CardLink
+							href={deployedLink}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							View Live ↗
 						</CardLink>
 					)}
 					{github && (
-						<CardLink href={github} target="_blank" rel="noopener noreferrer">
+						<CardLink
+							href={github}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							GitHub ↗
 						</CardLink>
 					)}
