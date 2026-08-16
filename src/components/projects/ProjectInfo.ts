@@ -1,27 +1,44 @@
-export const ProjectInfo = [
+export type ProjectEntry = {
+	projName: string;
+	minor: string;
+	biograph: string;
+	deployedLink?: string;
+	github?: string;
+	featured?: boolean;
+	tech?: string[];
+};
+
+export const ProjectInfo: ProjectEntry[] = [
+	{
+		projName: 'FedRate',
+		minor: 'Personal Project — Production Application',
+		biograph:
+			'Four-service Railway deployment: FastAPI backend, async scraper, MCP server, and React/Vite frontend — all wired together in a GitHub Actions dev→main CI/CD pipeline. The backend uses async SQLModel/asyncpg over PostgreSQL with 11 years of historical Fed rate data backfilled from the FRED API. Redis backs both the caching layer and slowapi rate limiting. The MCP server exposes rate data as callable agent tools. A Groq/Llama 3.3 70b endpoint powers the in-app chat, and the frontend ships a rate dashboard, yield-curve explorer, and chat interface.',
+		deployedLink: 'https://fedrate-production.up.railway.app/explorer',
+		github: 'https://github.com/coleloui/fedscrape-docker',
+		featured: true,
+		tech: ['FastAPI', 'MCP', 'PostgreSQL', 'Redis', 'React', 'TypeScript', 'Railway', 'Groq / Llama 3.3']
+	},
+	{
+		projName: 'Enduvo',
+		minor: 'Full Stack Software Engineer',
+		biograph:
+			'TypeScript/React 3D application built on a CQRS architecture with strictly typed DTO/DBO contracts enforced end to end. Built a custom Claude MCP server for secure 3D asset delivery via pre-signed URLs, and a Figma MCP integration that cut design-to-deployment cycle time by roughly 50%. Contributed a SketchFab façade microservice and Mixpanel analytics integration across the platform.',
+		tech: ['TypeScript', 'React', 'MCP', 'CQRS', 'Figma API', 'Mixpanel']
+	},
 	{
 		projName: 'Icarus',
-		minor: 'Waveform Entertainment - Front End Developer',
+		minor: 'Waveform Entertainment — Front End Developer',
 		biograph:
-			'Icarus, a next gen deployable remote collaborative broadcast software tool for internal use. All company broadcasts from July 2022 used this tool to power all broadcast assets. Modular projects were deployed with Icarus. Twitch OAuth users were managed by admins to operate the broadcasts via generated invites. Bash scripts were created to ensure zero downtime on updating live projects.'
+			'Next-gen deployable remote collaborative broadcast software for internal use. All company broadcasts from July 2022 ran on Icarus. Modular projects were deployed with Twitch OAuth user management — admins issued generated invites to operators. Bash scripts ensured zero-downtime updates on live projects.',
+		tech: ['MongoDB', 'Express', 'React', 'Node.js', 'Twitch OAuth']
 	},
 	{
-		projName: 'EPIC-PT',
+		projName: 'Epic Physical Therapy',
 		minor: 'Freelance Full Stack Developer',
-		biograph: `Epic-PT is an application built for the EPIC Physical Therapy company allowing users ease of visiblity of the company and its locations. The application is built on React with Material-UI. Forms are connected through AWS-SES as well as MongoAtlas. The application is deployed using Netlify and Cloudflare.`,
-		deployedLink: `https://www.epic-pt.com/`
-	},
-	{
-		projName: 'Portfolio-MaterialUI',
-		minor: 'Personal Full Stack Developer',
-		biograph: `This is a previous iteration of one of my portfolios. It was built on React in JavaScript. It utilized MaterialUI for the css framework and a contact form that is connected to MongoAtlas. The application was deployed using Netlify and Cloudflare.`,
-		github: `https://github.com/coleloui/portfolio-material`
-	},
-	{
-		projName: 'RocketList',
-		minor: 'BootCamp Capstone Project - Front End Developer',
-		biograph: `This application is a React website built with inspiration from Craigslist, Yahoo Answers, and Reddit. It allows for different topics and for people to make a post where others can make comments. We also added a feature that allows users to join chat rooms within a specific post where they can discuss the topic at hand in more depth.`,
-		deployedLink: `https://rocketlist.herokuapp.com/`,
-		github: `https://github.com/meganjacobs97/RocketList`
+		biograph:
+			'Web application for Epic Physical Therapy giving patients and prospective clients clear visibility into company locations and services. Built on React with Material-UI, contact forms wired through AWS SES, data persisted in MongoDB Atlas, and deployed via Netlify and Cloudflare.',
+		deployedLink: 'https://www.epic-pt.com/',
+		tech: ['React', 'Material-UI', 'AWS SES', 'MongoDB Atlas']
 	}
 ];
