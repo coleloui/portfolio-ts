@@ -20,8 +20,10 @@ export function TechSections() {
 }
 
 const MainDiv = styled.div`
-	background: #404040;
-	color: var(--white);
+	background: var(--bg-card);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	color: var(--text-secondary);
 	display: flex;
 	flex-direction: column;
 	margin: auto 0;
@@ -32,8 +34,10 @@ const MainDiv = styled.div`
 `;
 
 const MinorTitle = styled.h1`
-	color: var(--primary);
-	font-weight: 200;
+	color: var(--accent);
+	font-weight: 400;
+	font-size: 1rem;
+	font-family: var(--mono);
 `;
 
 export const ListSet = styled.ul`

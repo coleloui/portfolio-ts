@@ -13,6 +13,8 @@ export function ProjPage() {
 					bio={project.biograph}
 					deployedLink={project.deployedLink}
 					github={project.github}
+					featured={project.featured}
+					tech={project.tech}
 				/>
 			))}
 		</Wrapper>
@@ -24,4 +26,6 @@ const Wrapper = styled.div`
 	margin-bottom: 10px;
 	display: flex;
 	flex-direction: column;
+	flex: 1;
+	min-width: 0;
 `;
