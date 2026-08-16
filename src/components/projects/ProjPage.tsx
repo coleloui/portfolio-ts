@@ -28,4 +28,5 @@ const Wrapper = styled.div`
 	flex-direction: column;
 	flex: 1;
 	min-width: 0;
+	overflow-wrap: break-word;
 `;

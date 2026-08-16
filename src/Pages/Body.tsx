@@ -1,21 +1,13 @@
 import styled from 'styled-components';
 import { ProjPage } from '../components/projects/ProjPage';
 import { Aside } from '../components/aside';
-import { Stack } from '../components/TechStack/Stack';
-import { Notables } from '../components/notables/Notables';
 
-interface IMainInfo {
-	mainInfo: string;
-}
-
-export function TheBody({ mainInfo }: IMainInfo) {
+export function TheBody() {
 	return (
-		<Outer>
+		<Outer id="projects">
 			<Wrapper>
 				<Aside />
-				{mainInfo === 'projects' && <ProjPage />}
-				{mainInfo === 'stack' && <Stack />}
-				{mainInfo === 'notables' && <Notables />}
+				<ProjPage />
 			</Wrapper>
 		</Outer>
 	);
@@ -25,13 +17,15 @@ const Outer = styled.div`
 	display: flex;
 	justify-content: center;
 	padding: 0 1.5rem;
+	flex: 1;
 `;
 
 const Wrapper = styled.div`
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1400px;
 	display: flex;
 	flex-flow: row;
+	gap: 2rem;
 	@media (max-width: 1249px) {
 		flex-wrap: wrap;
 	}

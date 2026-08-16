@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export function Footer() {
-	return <Foot>© 2021 Louis Coleman</Foot>;
+	return <Foot>© {new Date().getFullYear()} Louis Coleman</Foot>;
 }
 
 const Foot = styled.footer`

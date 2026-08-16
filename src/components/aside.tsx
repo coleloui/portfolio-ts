@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Me from '../components/pics/me.jpg';
 import { Social } from './social/Social';
+import { TechItems } from './TechStack/TechItems';
 
 export function Aside() {
 	return (
@@ -15,13 +16,18 @@ export function Aside() {
 				Python/TypeScript infrastructure that runs them. I ship end to end:
 				backend, frontend, and the deployment pipeline in between.
 			</Biog>
-			<TagRow>
-				{['React', 'TypeScript', 'Python', 'FastAPI', 'PostgreSQL', 'MCP'].map(
-					tag => (
-						<Tag key={tag}>{tag}</Tag>
-					)
-				)}
-			</TagRow>
+			<StackSection>
+				{TechItems.map(group => (
+					<StackGroup key={group.name}>
+						<GroupHeader>{group.name}</GroupHeader>
+						<ItemList>
+							{group.tech.map(t => (
+								<Item key={t.item}>{t.item}</Item>
+							))}
+						</ItemList>
+					</StackGroup>
+				))}
+			</StackSection>
 			<Social />
 		</Container>
 	);
@@ -31,7 +37,9 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	padding-top: 35px;
+	min-width: 0;
+	overflow-wrap: break-word;
+	padding-top: 2rem;
 	margin-left: 10px;
 	@media (min-width: 1250px) {
 		width: 350px;
@@ -104,25 +112,45 @@ const Biog = styled.p`
 	}
 `;
 
-const TagRow = styled.div`
+const StackSection = styled.div`
+	margin-top: 1.5rem;
 	display: flex;
-	flex-wrap: wrap;
-	gap: 6px;
-	margin-top: 1rem;
-	justify-content: center;
+	flex-direction: column;
+	gap: 1.25rem;
 	@media (min-width: 1250px) {
-		justify-content: flex-start;
 		padding-left: 10px;
 	}
 `;
 
-const Tag = styled.span`
+const StackGroup = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+`;
+
+const GroupHeader = styled.p`
 	font-family: var(--mono);
-	font-size: 0.68rem;
-	color: var(--accent);
-	background: var(--accent-soft);
-	border: 1px solid var(--accent);
-	border-radius: 100px;
-	padding: 3px 10px;
-	letter-spacing: 0.03em;
+	font-size: 0.65rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--text-muted);
+`;
+
+const ItemList = styled.ul`
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+`;
+
+const Item = styled.li`
+	font-family: var(--mono);
+	font-size: 0.78rem;
+	color: var(--text-secondary);
+
+	&::before {
+		content: '· ';
+		color: var(--accent-cyan);
+	}
 `;
