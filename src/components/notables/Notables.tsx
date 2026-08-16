@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NotableList } from './NotableList';
 import { List } from '../list/List';
 
-export const Notables: React.FC = () => {
+export function Notables() {
 	return (
 		<MainDiv>
 			<MinorTitle>Notable Broadcasts</MinorTitle>
@@ -13,7 +13,7 @@ export const Notables: React.FC = () => {
 			</ListSet>
 		</MainDiv>
 	);
-};
+}
 
 const MainDiv = styled.div`
 	background: #404040;

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { Tech } from './Tech';
 
-export const Stack: React.FC = () => {
+export function Stack() {
 	return (
 		<Wrapper>
 			<Tech />
 		</Wrapper>
 	);
-};
+}
 
 const Wrapper = styled.div`
 	background: var(--secondary);

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-type ListPart = {
+interface ListProps {
 	item: string;
-};
+}
 
-export const List: React.FC<ListPart> = ({ item }) => {
+export function List({ item }: ListProps) {
 	return <ListItem>{item}</ListItem>;
-};
+}
 
 export const ListItem = styled.li`
 	color: var(--white);

@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import { TechSections } from './TechSections';
 import { Notables } from '../notables/Notables';
 
-export const Tech: React.FC = () => {
+export function Tech() {
 	return (
 		<TechStack>
 			<TechSections />
 			<Notables />
 		</TechStack>
 	);
-};
+}
 
 const TechStack = styled.div`
 	display: flex;

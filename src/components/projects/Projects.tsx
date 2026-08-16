@@ -1,20 +1,20 @@
 import styled from 'styled-components';
 
-export type ProjectProps = {
+export interface ProjectProps {
 	name: string;
 	minor: string;
 	bio: string;
 	deployedLink?: string;
 	github?: string;
-};
+}
 
-export const Projects: React.FC<ProjectProps> = ({
+export function Projects({
 	name,
 	minor,
 	bio,
 	deployedLink,
 	github
-}) => {
+}: ProjectProps) {
 	return (
 		<MainDiv>
 			<MainTitle>{name}</MainTitle>
@@ -30,7 +30,7 @@ export const Projects: React.FC<ProjectProps> = ({
 			</div>
 		</MainDiv>
 	);
-};
+}
 
 const MainDiv = styled.div`
 	background: #404040;

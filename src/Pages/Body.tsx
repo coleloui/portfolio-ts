@@ -3,11 +3,11 @@ import { ProjPage } from '../components/projects/ProjPage';
 import { Aside } from '../components/aside';
 import { Stack } from '../components/TechStack/Stack';
 
-export type BodyProps = {
+interface IMainInfo {
 	mainInfo: string;
-};
+}
 
-export const TheBody: React.FC<BodyProps> = ({ mainInfo }) => {
+export function TheBody({ mainInfo }: IMainInfo) {
 	return (
 		<Wrapper>
 			<Aside />
@@ -15,7 +15,7 @@ export const TheBody: React.FC<BodyProps> = ({ mainInfo }) => {
 			{mainInfo === 'stack' && <Stack />}
 		</Wrapper>
 	);
-};
+}
 
 const Wrapper = styled.div`
 	display: flex;

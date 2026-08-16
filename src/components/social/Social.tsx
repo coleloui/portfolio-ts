@@ -3,7 +3,7 @@ import EmailIcon from './social-icons/email.png';
 import GithubIcon from './social-icons/github.png';
 import LinkedIcon from './social-icons/linkedin.png';
 
-export const Social: React.FC = () => {
+export function Social() {
 	return (
 		<SocWrapper>
 			<Links
@@ -29,7 +29,7 @@ export const Social: React.FC = () => {
 			</Links>
 		</SocWrapper>
 	);
-};
+}
 
 const SocWrapper = styled.div`
 	display: flex;

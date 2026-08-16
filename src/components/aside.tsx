@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Me from '../components/pics/me.jpg';
 import { Social } from './social/Social';
 
-export const Aside: React.FC = () => {
+export function Aside() {
 	return (
 		<Container>
 			<Portrait src={Me} alt="Louis Coleman" />
@@ -17,7 +17,7 @@ export const Aside: React.FC = () => {
 			<Social />
 		</Container>
 	);
-};
+}
 
 const Container = styled.div`
 	display: flex;

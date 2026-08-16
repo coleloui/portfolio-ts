@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import Resume from './resume/LouisColemanResume.pdf';
 
-export type HeaderProps = {
+export interface HeaderProps {
 	setMainInfo: (val: string) => void;
-};
+}
 
-export const Header: React.FC<HeaderProps> = ({ setMainInfo }) => {
+export function Header({ setMainInfo }: HeaderProps) {
 	return (
 		<Nav>
 			<NavLink onClick={() => setMainInfo('projects')}>Projects</NavLink>
@@ -17,7 +17,7 @@ export const Header: React.FC<HeaderProps> = ({ setMainInfo }) => {
 			</Download>
 		</Nav>
 	);
-};
+}
 
 const Nav = styled.div`
 	display: flex;

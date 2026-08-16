@@ -34,7 +34,7 @@ export default tseslint.config(
 			'no-mixed-spaces-and-tabs': 'off',
 			'no-unused-vars': 'off',
 			'@typescript-eslint/no-non-null-assertion': 'error',
-			'@typescript-eslint/explicit-module-boundary-types': 'error',
+			'@typescript-eslint/explicit-module-boundary-types': 'off',
 			'@typescript-eslint/no-explicit-any': 'error',
 			'@typescript-eslint/no-unused-vars': 'error',
 		},

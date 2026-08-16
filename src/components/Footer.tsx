@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const Footer: React.FC = () => {
+export function Footer() {
 	return <Foot>© 2021 Louis Coleman</Foot>;
-};
+}
 
 const Foot = styled.div`
 	position: absolute;

@@ -2,7 +2,7 @@ import { ProjectInfo } from './ProjectInfo';
 import { Projects } from './Projects';
 import styled from 'styled-components';
 
-export const ProjPage: React.FC = () => {
+export function ProjPage() {
 	return (
 		<Wrapper>
 			{ProjectInfo.map(project => (
@@ -17,7 +17,7 @@ export const ProjPage: React.FC = () => {
 			))}
 		</Wrapper>
 	);
-};
+}
 
 const Wrapper = styled.div`
 	margin-top: 10px;
